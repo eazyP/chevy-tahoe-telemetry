@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import math
-import random
 
 from .obd import DTCRecord, PID_DEFINITIONS
 
@@ -16,7 +15,6 @@ class DemoSource:
     protocol = "DEMO — deterministic simulation"
 
     def __init__(self, seed: int = 2004):
-        self._random = random.Random(seed)
         self._step = 0
         self.connected = False
         self._dtcs = {
